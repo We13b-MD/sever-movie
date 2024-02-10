@@ -48,8 +48,8 @@ const allowedOrigins = [
   "http://localhost:5000",
   "https://accounts.google.com",
   "http://localhost:3000",
-  "https://Mikeflix.onrender.com",
-  "https://movieapplication-d251521d5bc5.herokuapp.com/"
+  "https://mikiflix.onrender.com"
+  
 ];
 
 const corsOptions = {
