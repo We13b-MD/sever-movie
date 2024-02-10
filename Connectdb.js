@@ -1,0 +1,16 @@
+const mongoose = require('mongoose')
+
+const connectDB = async()=>{
+try{
+mongoose.set('strictQuery', false) // this removes warnings from the commandline
+const conn  = await mongoose.connect(process.env.newMongoString);
+console.log(`Database Connected ${conn.connection.host}`)
+
+}catch(error){
+console.log(error)
+process.exit(1)
+}
+}
+
+module.exports = connectDB;
+
