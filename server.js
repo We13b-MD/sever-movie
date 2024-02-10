@@ -36,7 +36,7 @@ const sessionMiddleware = session({
   saveUninitialized: false,
 });
 
-app.use('/heroku', herokuroute)
+
 
 app.use(sessionMiddleware);
 
