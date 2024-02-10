@@ -110,7 +110,7 @@ app.get(
 );
 app.post("/login", passport.authenticate("local"), accountController.login);
 app.post("/register", accountController.register);
-no
+
 
 passport.serializeUser((user, done) => {
   // Serialize user data to store in the session (e.g., user.id)
