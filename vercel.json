@@ -3,9 +3,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "next.config.js",
-      "use": "@vercel/node",
-      "config": { "zeroConfig": true }
+      "src": "server",
+      "use": "@vercel/node"
     },
     {
       "src": "/(.*)",
@@ -13,7 +12,11 @@
     }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "api/$1" },
-    { "src": "/(.*)", "dest": "/" }
+    { "src": "/api/(.*)", "dest": "server/api/$1" },
+    { "src": "/(.*)", "dest": "server/$1" }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
+
